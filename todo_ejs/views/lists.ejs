@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Day Example</title>
+  
+  <link rel="stylesheet" href="/css/styles.css">
+  
+</head>
+<body>
+    <div class="box" id="heading">
+      <h1><%= listTitle %></h1>
+    </div>
+
+    <div class="box">
+        
+        <% for (let todo of item) { %>
+          <div class="item">
+            <input type="checkbox">
+          <p><%= todo.work %></p>
+          <div class="item">
+        <form method="post" action="/<%= todo._id %>?_method=DELETE">
+            <button type="submit">Delete</button>
+        </form>
+
+</div>
+          </div>
+        <% } %>
+   
+
+    <form action="/" method="POST">
+      <input type="text" name="item" placeholder="Enter:" autocomplete="off">
+      <button  class ="button" type="submit" name="list" value="<%= listTitle %>">+</button>
+ 
+    </form>
+  </div>
+  
+  <footer>
+    <p>Simple ToDo App with EJS</p>
+  </footer>
+</body>
+</html>

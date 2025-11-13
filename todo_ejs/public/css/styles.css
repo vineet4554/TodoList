@@ -1,0 +1,180 @@
+/* General Styles */
+html {
+    background-color: #E4E9FD;
+    background-image: linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%);
+    min-height: 100vh;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 40px;
+}
+
+body {
+    margin: 0;
+}
+
+/* Heading */
+h1 {
+    color: #fff;
+    padding: 20px;
+    font-size: 2em;
+    letter-spacing: 1px;
+}
+
+/* Container Box */
+.box {
+    max-width: 400px;
+    width: 100%;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+/* Heading Section */
+#heading {
+    background-color: #A683E3;
+    text-align: center;
+}
+
+/* Task Item */
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border-bottom: 1px solid #F1F1F1;
+    position: relative;
+    height: 50px;
+    transition: background 0.2s ease;
+}
+
+.item:hover {
+    background-color: #f9f9f9;
+}
+
+/* Last Item Border */
+.item:last-child {
+    border-bottom: 0;
+}
+
+/* Checkbox Styling */
+input[type="checkbox"] {
+    transform: scale(1.2);
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+/* Task Text */
+p {
+    margin: 0;
+    font-size: 1.2em;
+    color: #00204A;
+    padding: 0 10px;
+}
+
+/* Strike-through when checked */
+input:checked + p {
+    text-decoration: line-through;
+    text-decoration-color: #A683E3;
+    color: #888;
+}
+
+/* Delete Button Hidden by Default */
+.item form {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.item:hover form {
+    opacity: 1;
+}
+
+/* Delete Button Styling */
+.item form button {
+    background-color: #FF6B6B;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.item:hover form button {
+    background-color: #e05555;
+    transform: scale(1.05);
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+/* Text Input Styling */
+input[type="text"] {
+    flex-grow: 1;
+    height: 50px;
+    border: none;
+    background: #f1f1f1;
+    border-radius: 8px;
+    padding: 0 15px;
+    font-size: 1em;
+    transition: box-shadow 0.2s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px #A683E3;
+}
+
+/* Submit Button Styling */
+.button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: #A683E3;
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: #8a63c1;
+    transform: scale(1.1);
+}
+
+/* Placeholder Styling */
+::placeholder {
+    color: grey;
+    opacity: 1;
+}
+
+/* Footer Styling */
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9em;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .box {
+        margin: 20px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    input[type="text"] {
+        font-size: 0.9em;
+    }
+}
